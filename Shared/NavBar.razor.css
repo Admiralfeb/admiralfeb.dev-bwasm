@@ -9,7 +9,7 @@
   justify-content: initial;
 }
 
-.nav-link {
+::deep .nav-link {
   background-color: transparent;
   color: #f2f2f2;
   text-decoration: none;
@@ -18,16 +18,16 @@
   margin-left: 0.5em;
   text-align: center;
 }
-.nav-link.router-link-active {
+::deep .nav-link.active {
   background-color: var(--primary);
   color: white;
 }
-.nav-link:hover {
+::deep .nav-link:hover {
   background-color: #ddd;
   color: black;
   cursor: pointer;
 }
-.nav-link[mat-button] {
+::deep .nav-link[mat-button] {
   padding: 0 16px;
 }
 
