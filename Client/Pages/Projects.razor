@@ -1,3 +1,13 @@
 @page "/projects"
+@inject HttpClient Http
+@using BlazorApp.Shared
 
-<UnderConstruction title="Projects"/>
+<UnderConstruction title="Projects" />
+
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        List<Project> projects = await Http.GetFromJsonAsync<List<Project>>("/api/FetchProjects") ?? new List<Project>();
+        projects.ForEach(x => Console.WriteLine(x.Name));
+    }
+}
