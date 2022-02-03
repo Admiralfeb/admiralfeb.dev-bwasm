@@ -1,3 +1,29 @@
 @page "/resume"
+@inject HttpClient Http
+@using BlazorApp.Client.Components.Resume
+@inject IConfiguration Configuration
 
-<UnderConstruction title="Resume" />
+<div class="container">
+    <h2 class="text-center">Zachary's Resume</h2>
+    <div class="jumbotron">
+        @if (resume != null)
+        {
+            <div>
+                <Experiences experiences=@resume.Experiences.ToList() />
+                <SkillList Skills=@resume.Skills.ToList() />
+            </div>
+        }
+        else
+        {
+            <Loader />
+        }
+    </div>
+</div>
+
+@code {
+    private BlazorApp.Shared.Resume? resume;
+    protected override async Task OnInitializedAsync()
+    {
+        resume = await Http.GetFromJsonAsync<BlazorApp.Shared.Resume>($"{Configuration["apiPath"]}/api/FetchResume");
+    }
+}

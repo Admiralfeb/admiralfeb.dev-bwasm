@@ -1,0 +1,13 @@
+h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#experience {
+  max-width: 600px;
+}
+.experience-li {
+  list-style-type: none;
+}
+.experience-place {
+  margin-bottom: 21px;
+}

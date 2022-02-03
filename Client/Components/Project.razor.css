@@ -1,0 +1,16 @@
+.project-header {
+  display: flex;
+  flex-direction: row;
+}
+::deep [mat-button] {
+  background-color: var(--primary);
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+}
+h4 {
+  margin-bottom: 5px;
+}
+ul {
+  margin-top: 5px;
+}

@@ -1,0 +1,28 @@
+@using BlazorApp.Shared
+
+<section id="skills">
+    <h3>Skills</h3>
+    <ul class="skills-ul">
+        @foreach (var skillItem in Skills)
+        {
+            <li>
+                @skillItem.Skill
+                @if (skillItem.Ul != null)
+                {
+                    <ul>
+
+                        @foreach (var skillLi in skillItem.Ul)
+                        {
+                            <li>@skillLi</li>
+                        }
+                    </ul>
+                }
+            </li>
+        }
+    </ul>
+</section>
+
+@code {
+    [Parameter]
+    public List<SkillItem> Skills { get; set; } = new();
+}

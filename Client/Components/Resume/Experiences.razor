@@ -1,0 +1,30 @@
+@using BlazorApp.Shared
+
+<section id="experience">
+    <h3>Experience</h3>
+    <ul>
+        @foreach (var experience in experiences)
+        {
+            <li class="experience-li">
+                <div style="display: flex">
+                    <h4>@experience.Title</h4>
+                    <div class="fill" />
+                    @experience.StartDate - @experience.EndDate
+                </div>
+                <div class="experience-place">@experience.Place</div>
+                <ul>
+                    @foreach (var responsibility in experience.Responsibilities)
+                    {
+                        <li> @responsibility</li>
+                    }
+                </ul>
+                <hr />
+            </li>
+        }
+    </ul>
+</section>
+
+@code {
+    [Parameter]
+    public List<Experience> experiences { get; set; } = new();
+}

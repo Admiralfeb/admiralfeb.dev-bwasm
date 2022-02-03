@@ -1,0 +1,29 @@
+<div class="project-header">
+    <h3 class="title">@project.Name</h3>
+    <div class="fill" />
+    @if (!isLocalProject)
+    {
+        <a mat-button href="@project.Url">Project Url</a>
+    }
+    else
+    {
+        <NavLink [mat-button] href="@project.Url">Project Url</NavLink>
+    }
+    <a mat-button href="@project.GitUrl">Git URL</a>
+</div>
+<p>@project.Description</p>
+<h4>Technologies Used:</h4>
+<ul>
+    @foreach (var tech in project.Technologies)
+    {
+        <li>@tech</li>
+    }
+</ul>
+<hr />
+
+@code {
+    [Parameter, EditorRequired]
+    public BlazorApp.Shared.Project project { get; set; }
+    [Parameter]
+    public bool isLocalProject { get; set; } = false;
+}

@@ -1,13 +1,39 @@
 @page "/projects"
 @inject HttpClient Http
 @using BlazorApp.Shared
+@inject IConfiguration Configuration
+@inject StateContainer StateContainer
 
-<UnderConstruction title="Projects" />
+<div class="container">
+    <h2 class="text-center">Zachary's Projects</h2>
+    <div class="jumbotron">
+        @if (projects.Count > 0)
+        {
+            <div class="projects">
+                @foreach (var project in projects)
+                {
+                    <BlazorApp.Client.Components.Project project=@project />
+                }
+            </div>
+        }
+        else if (projects.Count == 0)
+        {
+            <div class="no-projects">
+                There seems to be no projects available to view.
+            </div>
+        }
+        else
+        {
+            <Loader />
+        }
+    </div>
+</div>
 
 @code {
+    private List<Project> projects;
     protected override async Task OnInitializedAsync()
     {
-        List<Project> projects = await Http.GetFromJsonAsync<List<Project>>("/api/FetchProjects") ?? new List<Project>();
+        projects = await Http.GetFromJsonAsync<List<Project>>($"{Configuration["apiPath"]}/api/FetchProjects") ?? new();
         projects.ForEach(x => Console.WriteLine(x.Name));
     }
 }
