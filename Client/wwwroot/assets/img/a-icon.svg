@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="512.0px"
+   height="512.0px"
+   viewBox="0 0 512.0 512.0"
+   version="1.1"
+   id="SVGRoot"
+   sodipodi:docname="a-icon.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview65"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="px"
+     showgrid="true"
+     inkscape:zoom="0.75277076"
+     inkscape:cx="255.72194"
+     inkscape:cy="256.38615"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid71" />
+  </sodipodi:namedview>
+  <defs
+     id="defs60">
+    <rect
+       x="1.8338015"
+       y="1.1966696"
+       width="505.31864"
+       height="504.89569"
+       id="rect7173" />
+    <rect
+       x="75.954181"
+       y="86.570802"
+       width="378.00643"
+       height="326.47812"
+       id="rect3733" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g7310">
+      <path
+         style="fill:#a349a4;stroke-width:1.32843;fill-opacity:1"
+         d="M 1.3284257,255.05773 V 0.66421283 H 255.05773 508.78703 V 255.05773 509.45124 H 255.05773 1.3284257 Z"
+         id="path251" />
+      <text
+         xml:space="preserve"
+         style="font-size:752.946px;fill:#ffffff;fill-opacity:1;stroke-width:1.12941"
+         x="0.48231989"
+         y="461.67239"
+         id="text7197"
+         transform="scale(0.95249644,1.0498727)"><tspan
+           sodipodi:role="line"
+           id="tspan7195"
+           x="0.48231989"
+           y="461.67239"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:752.946px;font-family:Z003;-inkscape-font-specification:Z003;stroke-width:1.12941">A</tspan></text>
+    </g>
+  </g>
+</svg>
