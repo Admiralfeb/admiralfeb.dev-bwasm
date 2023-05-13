@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using BlazorApp.Client;
-using Microsoft.Extensions.Configuration;
+using Fluxor;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
@@ -13,13 +13,8 @@ var http = new HttpClient()
 };
 
 builder.Services.AddScoped(sp => http);
-builder.Services.AddSingleton<StateContainer>();
-
-
-
-// using var response = await http.GetAsync("cars.json");
-// using var stream = await response.Content.ReadAsStreamAsync();
-
-// builder.Configuration.AddJsonStream(stream);
+builder.Services.AddScoped<IHttpService, HttpService>();
+var currentAssembly = typeof(Program).Assembly;
+builder.Services.AddFluxor(options => options.ScanAssemblies(currentAssembly));
 
 await builder.Build().RunAsync();

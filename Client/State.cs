@@ -2,25 +2,25 @@ using BlazorApp.Shared;
 namespace BlazorApp.Client;
 public class StateContainer
 {
-    private Resume? resume;
-    private List<Project>? projects;
+    private Resume? _resume;
+    private IEnumerable<Project>? _projects;
 
     public Resume? ResumeItem
     {
-        get => resume;
+        get => _resume;
         set
         {
-            resume = value;
+            _resume = value;
             NotifyStateChanged();
         }
     }
 
-    public List<Project> Projects
+    public IEnumerable<Project> Projects
     {
-        get => projects ?? new();
+        get => _projects ?? new List<Project>();
         set
         {
-            projects = value;
+            _projects = value;
             NotifyStateChanged();
         }
     }
